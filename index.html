@@ -226,18 +226,18 @@
                     </a>
                 </div>
             </div>
-            <form class="contact-form" onsubmit="handleSubmit(event)">
+            <form class="contact-form" action="https://formspree.io/f/mgopgbjn" method="POST" onsubmit="handleSubmit(event)">
                 <div class="form-group">
                     <label class="form-label">nome</label>
-                    <input type="text" class="form-input" placeholder="Seu nome">
+                    <input type="text" name="nome" class="form-input" placeholder="Seu nome" required>
                 </div>
                 <div class="form-group">
                     <label class="form-label">email</label>
-                    <input type="email" class="form-input" placeholder="seu@email.com">
+                    <input type="email" name="email" class="form-input" placeholder="seu@email.com" required>
                 </div>
                 <div class="form-group">
                     <label class="form-label">mensagem</label>
-                    <textarea class="form-textarea" placeholder="Conte sobre seu projeto ou ideia..."></textarea>
+                    <textarea name="mensagem" class="form-textarea" placeholder="Conte sobre seu projeto ou ideia..." required></textarea>
                 </div>
                 <button type="submit" class="form-submit">enviar mensagem</button>
             </form>

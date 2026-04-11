@@ -10,16 +10,26 @@ const observer = new IntersectionObserver((entries) => {
 
 bars.forEach(b => observer.observe(b));
 
-// Manipulador do formulário de contato
+// Manipulador do formulário de contato com Formspree
 function handleSubmit(e) {
-    e.preventDefault();
     const btn = e.target.querySelector('.form-submit');
-    btn.textContent = 'mensagem enviada ✓';
-    btn.style.background = '#1D9E75';
+    const form = e.target;
     
+    // Desabilita o botão durante o envio
+    btn.disabled = true;
+    btn.textContent = 'enviando...';
+    
+    // Deixa o Formspree processar o envio
+    // Após o envio, mostra feedback visual
     setTimeout(() => {
-        btn.textContent = 'enviar mensagem';
-        btn.style.background = '';
-        e.target.reset();
-    }, 3000);
+        btn.textContent = 'mensagem enviada ✓';
+        btn.style.background = '#1D9E75';
+        
+        setTimeout(() => {
+            btn.textContent = 'enviar mensagem';
+            btn.style.background = '';
+            btn.disabled = false;
+            form.reset();
+        }, 3000);
+    }, 1000);
 }
