@@ -100,15 +100,29 @@ let lightboxState = {
 };
 
 function openLightbox(projectId, index) {
-    const slider = document.getElementById(`slider-${projectId}`);
-    const images = Array.from(slider.children);
+    // Para imagens únicas (não slider)
+    const singleImage = document.querySelector(`img[onclick*="${projectId}"]`);
     
-    lightboxState.projectId = projectId;
-    lightboxState.currentIndex = index;
-    lightboxState.images = images.map(img => ({
-        src: img.src,
-        alt: img.alt
-    }));
+    if (singleImage) {
+        lightboxState.projectId = projectId;
+        lightboxState.currentIndex = 0;
+        lightboxState.images = [{
+            src: singleImage.src,
+            alt: singleImage.alt
+        }];
+    } else {
+        // Para sliders
+        const slider = document.getElementById(`slider-${projectId}`);
+        if (!slider) return;
+        
+        const images = Array.from(slider.children);
+        lightboxState.projectId = projectId;
+        lightboxState.currentIndex = index;
+        lightboxState.images = images.map(img => ({
+            src: img.src,
+            alt: img.alt
+        }));
+    }
     
     updateLightbox();
     document.getElementById('lightbox').classList.add('active');
@@ -123,6 +137,9 @@ function closeLightbox(event) {
 }
 
 function lightboxNavigate(direction) {
+    // Só navega se tiver mais de uma imagem
+    if (lightboxState.images.length <= 1) return;
+    
     lightboxState.currentIndex += direction;
     
     if (lightboxState.currentIndex < 0) {
@@ -137,11 +154,21 @@ function lightboxNavigate(direction) {
 function updateLightbox() {
     const img = document.getElementById('lightbox-image');
     const counter = document.getElementById('lightbox-counter');
+    const arrows = document.querySelectorAll('.lightbox-arrow');
     const current = lightboxState.images[lightboxState.currentIndex];
     
     img.src = current.src;
     img.alt = current.alt;
-    counter.textContent = `${lightboxState.currentIndex + 1} / ${lightboxState.images.length}`;
+    
+    // Mostrar/ocultar contador e setas se tiver apenas 1 imagem
+    if (lightboxState.images.length > 1) {
+        counter.textContent = `${lightboxState.currentIndex + 1} / ${lightboxState.images.length}`;
+        counter.style.display = 'block';
+        arrows.forEach(arrow => arrow.style.display = 'flex');
+    } else {
+        counter.style.display = 'none';
+        arrows.forEach(arrow => arrow.style.display = 'none');
+    }
 }
 
 // Fechar lightbox com ESC
