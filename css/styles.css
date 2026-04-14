@@ -327,6 +327,7 @@ section {
     justify-content: center;
     position: relative;
     overflow: hidden;
+    cursor: pointer;
 }
 
 .project-image img {
@@ -351,6 +352,7 @@ section {
     object-fit: cover;
     image-rendering: -webkit-optimize-contrast;
     image-rendering: crisp-edges;
+    cursor: default;
 }
 
 .slider-dots {

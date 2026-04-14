@@ -130,22 +130,22 @@
             <div class="project-card">
                 <div class="project-image">
                     <div class="project-image-slider" id="slider-sistema-relatorios">
-                        <img src="images/sistema-relatorios-1.png" alt="Sistema de Relatórios - Login" onclick="openLightbox('sistema-relatorios', 0)">
-                        <img src="images/sistema-relatorios-2.png" alt="Sistema de Relatórios - Dashboard" onclick="openLightbox('sistema-relatorios', 1)">
-                        <img src="images/sistema-relatorios-3.png" alt="Sistema de Relatórios - Histórico" onclick="openLightbox('sistema-relatorios', 2)">
-                        <img src="images/sistema-relatorios-4.png" alt="Sistema de Relatórios - Formulário" onclick="openLightbox('sistema-relatorios', 3)">
+                        <img src="images/sistema-relatorios-1.png" alt="Sistema de Relatórios - Login">
+                        <img src="images/sistema-relatorios-2.png" alt="Sistema de Relatórios - Dashboard">
+                        <img src="images/sistema-relatorios-3.png" alt="Sistema de Relatórios - Histórico">
+                        <img src="images/sistema-relatorios-4.png" alt="Sistema de Relatórios - Formulário">
                     </div>
-                    <button class="slider-arrow prev" onclick="moveSlider('sistema-relatorios', -1)">‹</button>
-                    <button class="slider-arrow next" onclick="moveSlider('sistema-relatorios', 1)">›</button>
+                    <button class="slider-arrow prev" onclick="moveSlider('sistema-relatorios', -1); event.stopPropagation();">‹</button>
+                    <button class="slider-arrow next" onclick="moveSlider('sistema-relatorios', 1); event.stopPropagation();">›</button>
                     <div class="slider-dots" id="dots-sistema-relatorios">
-                        <span class="slider-dot active" onclick="goToSlide('sistema-relatorios', 0)"></span>
-                        <span class="slider-dot" onclick="goToSlide('sistema-relatorios', 1)"></span>
-                        <span class="slider-dot" onclick="goToSlide('sistema-relatorios', 2)"></span>
-                        <span class="slider-dot" onclick="goToSlide('sistema-relatorios', 3)"></span>
+                        <span class="slider-dot active" onclick="goToSlide('sistema-relatorios', 0); event.stopPropagation();"></span>
+                        <span class="slider-dot" onclick="goToSlide('sistema-relatorios', 1); event.stopPropagation();"></span>
+                        <span class="slider-dot" onclick="goToSlide('sistema-relatorios', 2); event.stopPropagation();"></span>
+                        <span class="slider-dot" onclick="goToSlide('sistema-relatorios', 3); event.stopPropagation();"></span>
                     </div>
                     <div class="project-badge">4 screenshots</div>
                 </div>
-                <div class="project-content">
+                <div class="project-content" onclick="openLightbox('sistema-relatorios', sliderStates['sistema-relatorios'] ? sliderStates['sistema-relatorios'].currentIndex : 0)" style="cursor: pointer;">
                     <div class="project-num">projeto — 03</div>
                     <h3 class="project-title">Sistema de Relatórios — Projeto Pessoal</h3>
                     <p class="project-desc">Sistema web que desenvolvi para automatizar a geração dos meus relatórios de estágio em DOCX. Inclui dashboard pessoal, histórico de relatórios, upload de dados via JSON e deploy containerizado para uso próprio.</p>

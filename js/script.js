@@ -100,21 +100,10 @@ let lightboxState = {
 };
 
 function openLightbox(projectId, index) {
-    // Para imagens únicas (não slider)
-    const singleImage = document.querySelector(`img[onclick*="${projectId}"]`);
+    // Para sliders
+    const slider = document.getElementById(`slider-${projectId}`);
     
-    if (singleImage) {
-        lightboxState.projectId = projectId;
-        lightboxState.currentIndex = 0;
-        lightboxState.images = [{
-            src: singleImage.src,
-            alt: singleImage.alt
-        }];
-    } else {
-        // Para sliders
-        const slider = document.getElementById(`slider-${projectId}`);
-        if (!slider) return;
-        
+    if (slider) {
         const images = Array.from(slider.children);
         lightboxState.projectId = projectId;
         lightboxState.currentIndex = index;
@@ -122,6 +111,18 @@ function openLightbox(projectId, index) {
             src: img.src,
             alt: img.alt
         }));
+    } else {
+        // Para imagens únicas (não slider)
+        const singleImage = document.querySelector(`img[onclick*="${projectId}"]`);
+        
+        if (singleImage) {
+            lightboxState.projectId = projectId;
+            lightboxState.currentIndex = 0;
+            lightboxState.images = [{
+                src: singleImage.src,
+                alt: singleImage.alt
+            }];
+        }
     }
     
     updateLightbox();
