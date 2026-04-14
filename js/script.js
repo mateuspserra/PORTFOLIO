@@ -87,9 +87,7 @@ function autoPlaySliders() {
 
 // Inicializar sliders
 document.addEventListener('DOMContentLoaded', () => {
-    initSlider('sistema-relatorios');
-    // Descomentar para auto-play a cada 5 segundos
-    // setInterval(autoPlaySliders, 5000);
+    // Sliders removidos - usando imagens únicas
 });
 
 // Lightbox para visualizar imagens em tamanho maior
