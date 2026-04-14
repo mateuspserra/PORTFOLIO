@@ -319,7 +319,7 @@ section {
 
 .project-image {
     width: 100%;
-    height: 200px;
+    height: 280px;
     background: var(--surface2);
     border-bottom: 0.5px solid var(--border);
     display: flex;
@@ -334,8 +334,9 @@ section {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    image-rendering: -webkit-optimize-contrast;
-    image-rendering: crisp-edges;
+    image-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 .project-image-slider {
@@ -350,8 +351,9 @@ section {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    image-rendering: -webkit-optimize-contrast;
-    image-rendering: crisp-edges;
+    image-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
     cursor: default;
 }
 
@@ -444,13 +446,16 @@ section {
 }
 
 .lightbox-image {
-    max-width: 100%;
-    max-height: 90vh;
+    max-width: 95%;
+    max-height: 95vh;
+    width: auto;
+    height: auto;
     object-fit: contain;
     border-radius: 8px;
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
-    image-rendering: -webkit-optimize-contrast;
-    image-rendering: crisp-edges;
+    image-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 .lightbox-close {
@@ -955,16 +960,16 @@ footer {
         gap: 16px;
     }
     
+    .project-image {
+        height: 220px;
+    }
+    
     .project-card {
         padding: 0;
     }
     
     .project-content {
         padding: 24px;
-    }
-    
-    .project-image {
-        height: 180px;
     }
     
     .about-grid, .contact-layout { 
@@ -1014,6 +1019,10 @@ footer {
         justify-content: space-between;
     }
     
+    .project-image {
+        height: 180px;
+    }
+    
     .project-tags {
         gap: 4px;
     }
@@ -1021,5 +1030,19 @@ footer {
     .tag {
         font-size: 9px;
         padding: 3px 8px;
+    }
+    
+    .lightbox-arrow {
+        width: 40px;
+        height: 40px;
+        font-size: 20px;
+    }
+    
+    .lightbox-arrow.prev {
+        left: 10px;
+    }
+    
+    .lightbox-arrow.next {
+        right: 10px;
     }
 }

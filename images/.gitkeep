@@ -1,5 +1,19 @@
 # Pasta para screenshots dos projetos
-# Adicione suas imagens aqui:
-# - mototracker.png (800x400px recomendado)
-# - painel-admin.png (800x400px recomendado)
-# - sistema-relatorios.png (800x400px recomendado)
+
+## Especificações recomendadas:
+
+### Para os cards (slider):
+- Resolução: 1600x900px (16:9)
+- Formato: PNG
+- Tamanho: ~400KB por imagem
+- Qualidade: Alta
+
+### Para visualização ampliada (lightbox):
+- Resolução: 1920x1080px (Full HD)
+- Formato: PNG
+- Tamanho: ~800KB por imagem
+- Qualidade: Máxima
+
+## Imagens necessárias:
+- painel-admin.png (Projeto 02)
+- sistema-relatorios-1.png até sistema-relatorios-4.png (Projeto 03)
