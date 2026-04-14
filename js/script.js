@@ -99,6 +99,25 @@ let lightboxState = {
     images: []
 };
 
+function openLightboxFromSlider(projectId) {
+    const slider = document.getElementById(`slider-${projectId}`);
+    if (!slider) return;
+    
+    const images = Array.from(slider.children);
+    const currentIndex = sliderStates[projectId] ? sliderStates[projectId].currentIndex : 0;
+    
+    lightboxState.projectId = projectId;
+    lightboxState.currentIndex = currentIndex;
+    lightboxState.images = images.map(img => ({
+        src: img.src,
+        alt: img.alt
+    }));
+    
+    updateLightbox();
+    document.getElementById('lightbox').classList.add('active');
+    document.body.style.overflow = 'hidden';
+}
+
 function openLightbox(projectId, index) {
     // Para sliders
     const slider = document.getElementById(`slider-${projectId}`);
@@ -106,7 +125,7 @@ function openLightbox(projectId, index) {
     if (slider) {
         const images = Array.from(slider.children);
         lightboxState.projectId = projectId;
-        lightboxState.currentIndex = index;
+        lightboxState.currentIndex = index || 0;
         lightboxState.images = images.map(img => ({
             src: img.src,
             alt: img.alt
