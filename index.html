@@ -129,11 +129,21 @@
 
             <div class="project-card">
                 <div class="project-image">
-                    <img src="images/sistema-relatorios.png" alt="Sistema de Relatórios" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                    <div class="project-image-placeholder" style="display: none;">
-                        screenshot do projeto<br>800x400px
+                    <div class="project-image-slider" id="slider-sistema-relatorios">
+                        <img src="images/sistema-relatorios-1.png" alt="Sistema de Relatórios - Login" onclick="openLightbox('sistema-relatorios', 0)">
+                        <img src="images/sistema-relatorios-2.png" alt="Sistema de Relatórios - Dashboard" onclick="openLightbox('sistema-relatorios', 1)">
+                        <img src="images/sistema-relatorios-3.png" alt="Sistema de Relatórios - Histórico" onclick="openLightbox('sistema-relatorios', 2)">
+                        <img src="images/sistema-relatorios-4.png" alt="Sistema de Relatórios - Formulário" onclick="openLightbox('sistema-relatorios', 3)">
                     </div>
-                    <div class="project-badge">screenshot do projeto</div>
+                    <button class="slider-arrow prev" onclick="moveSlider('sistema-relatorios', -1)">‹</button>
+                    <button class="slider-arrow next" onclick="moveSlider('sistema-relatorios', 1)">›</button>
+                    <div class="slider-dots" id="dots-sistema-relatorios">
+                        <span class="slider-dot active" onclick="goToSlide('sistema-relatorios', 0)"></span>
+                        <span class="slider-dot" onclick="goToSlide('sistema-relatorios', 1)"></span>
+                        <span class="slider-dot" onclick="goToSlide('sistema-relatorios', 2)"></span>
+                        <span class="slider-dot" onclick="goToSlide('sistema-relatorios', 3)"></span>
+                    </div>
+                    <div class="project-badge">4 screenshots</div>
                 </div>
                 <div class="project-content">
                     <div class="project-num">projeto — 03</div>
