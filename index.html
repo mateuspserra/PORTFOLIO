@@ -81,11 +81,23 @@
         <div class="projects-grid">
             <div class="project-card">
                 <div class="project-image">
-                    <img src="images/mototracker.png" alt="MotoTracker App" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                    <div class="project-image-placeholder" style="display: none;">
-                        screenshot do projeto<br>800x400px
+                    <div class="project-image-slider" id="slider-mototracker">
+                        <img src="images/mototracker-1.png" alt="MotoTracker - Tela 1" onclick="openLightbox('mototracker', 0)">
+                        <img src="images/mototracker-2.png" alt="MotoTracker - Tela 2" onclick="openLightbox('mototracker', 1)">
+                        <img src="images/mototracker-3.png" alt="MotoTracker - Tela 3" onclick="openLightbox('mototracker', 2)">
+                        <img src="images/mototracker-4.png" alt="MotoTracker - Tela 4" onclick="openLightbox('mototracker', 3)">
+                        <img src="images/mototracker-5.png" alt="MotoTracker - Tela 5" onclick="openLightbox('mototracker', 4)">
                     </div>
-                    <div class="project-badge">screenshot do projeto</div>
+                    <button class="slider-arrow prev" onclick="moveSlider('mototracker', -1)">‹</button>
+                    <button class="slider-arrow next" onclick="moveSlider('mototracker', 1)">›</button>
+                    <div class="slider-dots" id="dots-mototracker">
+                        <span class="slider-dot active" onclick="goToSlide('mototracker', 0)"></span>
+                        <span class="slider-dot" onclick="goToSlide('mototracker', 1)"></span>
+                        <span class="slider-dot" onclick="goToSlide('mototracker', 2)"></span>
+                        <span class="slider-dot" onclick="goToSlide('mototracker', 3)"></span>
+                        <span class="slider-dot" onclick="goToSlide('mototracker', 4)"></span>
+                    </div>
+                    <div class="project-badge">5 screenshots</div>
                 </div>
                 <div class="project-content">
                     <div class="project-num">projeto — 01</div>
@@ -318,6 +330,17 @@
         <span class="footer-copy">© 2026 Mateus Serra — desenvolvido com precisão</span>
         <a href="#hero" class="footer-back">voltar ao topo ↑</a>
     </footer>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox" onclick="closeLightbox(event)">
+        <div class="lightbox-content">
+            <button class="lightbox-close" onclick="closeLightbox(event)">×</button>
+            <button class="lightbox-arrow prev" onclick="lightboxNavigate(-1); event.stopPropagation();">‹</button>
+            <img class="lightbox-image" id="lightbox-image" src="" alt="">
+            <button class="lightbox-arrow next" onclick="lightboxNavigate(1); event.stopPropagation();">›</button>
+            <div class="lightbox-counter" id="lightbox-counter"></div>
+        </div>
+    </div>
 
     <script src="js/script.js"></script>
 </body>
