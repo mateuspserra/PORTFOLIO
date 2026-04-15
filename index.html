@@ -27,7 +27,11 @@
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Syne:wght@400;500;700;800&display=swap" rel="stylesheet">
+    <link rel="preload" as="image" href="images/painel%20admin.png">
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;700;800&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript>
+        <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;700;800&display=swap" rel="stylesheet">
+    </noscript>
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
@@ -87,7 +91,13 @@
 
             <div class="hero-visual fade-in">
                 <div class="hero-visual-frame">
-                    <img src="images/painel admin.png" alt="Preview do painel administrativo do MotoTracker">
+                    <img
+                        src="images/painel admin.png"
+                        alt="Preview do painel administrativo do MotoTracker"
+                        loading="eager"
+                        decoding="async"
+                        fetchpriority="high"
+                    >
                 </div>
                 <div class="hero-visual-meta">
                     <span>ecossistema MotoTracker</span>
@@ -169,6 +179,8 @@
                             alt="MotoTracker Painel Admin"
                             class="project-shot"
                             data-open-gallery="painel-admin"
+                            loading="lazy"
+                            decoding="async"
                         >
                         <button type="button" class="project-badge" data-open-gallery="painel-admin">ampliar screenshot</button>
                     </div>
@@ -203,6 +215,8 @@
                             alt="Sistema de Relatorios"
                             class="project-shot"
                             data-open-gallery="sistema-relatorios"
+                            loading="lazy"
+                            decoding="async"
                         >
                         <button type="button" class="project-badge" data-open-gallery="sistema-relatorios">ver telas</button>
                     </div>
@@ -232,7 +246,7 @@
             </div>
         </section>
 
-        <section id="sobre">
+        <section id="sobre" class="deferred-section">
             <div class="section-header">
                 <span class="section-num">02</span>
                 <h2 class="section-title">sobre</h2>
@@ -279,7 +293,7 @@
             </div>
         </section>
 
-        <section id="skills">
+        <section id="skills" class="deferred-section">
             <div class="section-header">
                 <span class="section-num">03</span>
                 <h2 class="section-title">skills</h2>
@@ -359,7 +373,7 @@
             </div>
         </section>
 
-        <section id="contato">
+        <section id="contato" class="deferred-section">
             <div class="section-header">
                 <span class="section-num">04</span>
                 <h2 class="section-title">contato</h2>
@@ -416,13 +430,6 @@
         <span class="footer-copy">&copy; 2026 Mateus Serra</span>
         <a href="#hero" class="footer-back">voltar ao topo</a>
     </footer>
-
-    <div class="lightbox-sources" aria-hidden="true">
-        <img src="images/painel admin.png" alt="MotoTracker Painel Admin" data-gallery="painel-admin">
-        <img src="images/lj relatorios.png" alt="Sistema de Relatorios - visao geral" data-gallery="sistema-relatorios">
-        <img src="images/tela enfermagem.png" alt="Sistema de Relatorios - tela de enfermagem" data-gallery="sistema-relatorios">
-        <img src="images/meus relatorios.png" alt="Sistema de Relatorios - meus relatorios" data-gallery="sistema-relatorios">
-    </div>
 
     <div class="lightbox" id="lightbox" aria-hidden="true">
         <div class="lightbox-content">

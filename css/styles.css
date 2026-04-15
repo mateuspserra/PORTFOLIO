@@ -20,8 +20,8 @@
     --text-muted: #918a7e;
     --green: #4fd89e;
     --danger: #ff8a8a;
-    --mono: "Space Mono", monospace;
-    --display: "Syne", sans-serif;
+    --mono: ui-monospace, "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+    --display: "Syne", "Segoe UI", sans-serif;
     --shadow: 0 24px 80px rgba(0, 0, 0, 0.45);
 }
 
@@ -372,6 +372,11 @@ section {
 section {
     padding-top: 0;
     padding-bottom: 112px;
+}
+
+.deferred-section {
+    content-visibility: auto;
+    contain-intrinsic-size: 1px 920px;
 }
 
 .section-header {
@@ -932,10 +937,6 @@ footer {
     color: var(--accent);
 }
 
-.lightbox-sources {
-    display: none;
-}
-
 .lightbox {
     position: fixed;
     inset: 0;
@@ -1170,6 +1171,15 @@ footer {
 }
 
 @media (max-width: 720px) {
+    .page-noise {
+        display: none;
+    }
+
+    .site-nav,
+    .project-badge {
+        backdrop-filter: none;
+    }
+
     .hero,
     section {
         padding-left: 20px;

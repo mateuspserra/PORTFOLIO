@@ -13,22 +13,34 @@ const lightboxClose = document.querySelector(".lightbox-close");
 const lightboxPrev = document.querySelector(".lightbox-arrow.prev");
 const lightboxNext = document.querySelector(".lightbox-arrow.next");
 const galleryTriggers = document.querySelectorAll("[data-open-gallery]");
-const gallerySources = document.querySelectorAll("[data-gallery]");
 
 const lightboxState = {
     galleryId: null,
     currentIndex: 0
 };
 
-const galleries = Array.from(gallerySources).reduce((acc, item) => {
-    const key = item.dataset.gallery;
-    acc[key] = acc[key] || [];
-    acc[key].push({
-        src: item.getAttribute("src"),
-        alt: item.getAttribute("alt") || ""
-    });
-    return acc;
-}, {});
+const galleries = {
+    "painel-admin": [
+        {
+            src: "images/painel admin.png",
+            alt: "MotoTracker Painel Admin"
+        }
+    ],
+    "sistema-relatorios": [
+        {
+            src: "images/lj relatorios.png",
+            alt: "Sistema de Relatorios - visao geral"
+        },
+        {
+            src: "images/tela enfermagem.png",
+            alt: "Sistema de Relatorios - tela de enfermagem"
+        },
+        {
+            src: "images/meus relatorios.png",
+            alt: "Sistema de Relatorios - meus relatorios"
+        }
+    ]
+};
 
 function setNavState(isOpen) {
     if (!navToggle || !navPanel) {
