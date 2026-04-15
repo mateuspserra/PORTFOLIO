@@ -29,13 +29,13 @@
   <rect x="24" y="24" width="1152" height="582" rx="28" fill="url(#goldGlow)" opacity="0.2"/>
 
   <rect x="96" y="104" width="88" height="4" rx="2" fill="#f0c419"/>
-  <text x="96" y="148" fill="#f0c419" font-family="Consolas, 'Courier New', monospace" font-size="18" letter-spacing="4">APPS MOBILE, BACKEND E OPERACAO</text>
+  <text x="96" y="148" fill="#f0c419" font-family="Consolas, 'Courier New', monospace" font-size="18" letter-spacing="4">APPS MOBILE, BACKEND E OPERA&#199;&#195;O</text>
 
   <text x="96" y="242" fill="#f6f1e8" font-family="'Segoe UI', Arial, sans-serif" font-size="84" font-weight="800" letter-spacing="-2">Mateus</text>
   <text x="96" y="324" fill="#f0c419" font-family="'Segoe UI', Arial, sans-serif" font-size="84" font-weight="800" letter-spacing="-2">Serra</text>
 
   <text x="96" y="388" fill="#c2bcaf" font-family="'Segoe UI', Arial, sans-serif" font-size="28">
-    <tspan x="96" dy="0">Do app React Native a API privada,</tspan>
+    <tspan x="96" dy="0">Do app React Native &#224; API privada,</tspan>
     <tspan x="96" dy="38">painel interno e rotina operacional.</tspan>
   </text>
 
@@ -47,12 +47,12 @@
     <text x="383" y="492" fill="#f6f1e8" font-family="Consolas, 'Courier New', monospace" font-size="16" text-anchor="middle">APP + API + PAINEL</text>
 
     <rect x="498" y="458" width="204" height="56" rx="28" fill="#151a22" stroke="rgba(255,255,255,0.08)"/>
-    <text x="600" y="492" fill="#f6f1e8" font-family="Consolas, 'Courier New', monospace" font-size="16" text-anchor="middle">MVP EM PRODUCAO</text>
+    <text x="600" y="492" fill="#f6f1e8" font-family="Consolas, 'Courier New', monospace" font-size="16" text-anchor="middle">MVP EM PRODU&#199;&#195;O</text>
   </g>
 
   <g>
     <circle cx="102" cy="560" r="7" fill="#4fd89e"/>
-    <text x="122" y="566" fill="#4fd89e" font-family="Consolas, 'Courier New', monospace" font-size="17" letter-spacing="1">DISPONIVEL PARA PROJETOS</text>
+    <text x="122" y="566" fill="#4fd89e" font-family="Consolas, 'Courier New', monospace" font-size="17" letter-spacing="1">DISPON&#205;VEL PARA PROJETOS</text>
   </g>
 
   <g filter="url(#shadow)">
@@ -87,7 +87,7 @@
     <rect x="862" y="424" width="152" height="10" rx="5" fill="#273243"/>
     <rect x="862" y="446" width="188" height="10" rx="5" fill="#1b2431"/>
     <rect x="862" y="468" width="134" height="10" rx="5" fill="#273243"/>
-    <text x="862" y="493" fill="#f6f1e8" font-family="Consolas, 'Courier New', monospace" font-size="14">api privada</text>
+    <text x="862" y="493" fill="#f6f1e8" font-family="Consolas, 'Courier New', monospace" font-size="14">API privada</text>
     <text x="862" y="511" fill="#918a7e" font-family="Consolas, 'Courier New', monospace" font-size="13">auth, regras, monitoramento</text>
   </g>
 

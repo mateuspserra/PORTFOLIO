@@ -29,15 +29,15 @@ const galleries = {
     "sistema-relatorios": [
         {
             src: "images/lj relatorios.png",
-            alt: "Sistema de Relatorios - visao geral"
+            alt: "Sistema de Relat\u00f3rios - vis\u00e3o geral"
         },
         {
             src: "images/tela enfermagem.png",
-            alt: "Sistema de Relatorios - tela de enfermagem"
+            alt: "Sistema de Relat\u00f3rios - tela de enfermagem"
         },
         {
             src: "images/meus relatorios.png",
-            alt: "Sistema de Relatorios - meus relatorios"
+            alt: "Sistema de Relat\u00f3rios - meus relat\u00f3rios"
         }
     ],
     "monitor-api": [
@@ -221,14 +221,14 @@ async function handleSubmit(event) {
         }
 
         form.reset();
-        statusMessage.textContent = "Mensagem enviada. Retorno em ate 24h.";
+        statusMessage.textContent = "Mensagem enviada. Retorno em at\u00e9 24h.";
         statusMessage.classList.add("success");
     } catch (error) {
-        statusMessage.textContent = "Nao consegui enviar agora. Tente novamente ou use o email direto.";
+        statusMessage.textContent = "N\u00e3o consegui enviar agora. Tente novamente ou use o e-mail direto.";
         statusMessage.classList.add("error");
     } finally {
         submitButton.disabled = false;
-        submitButton.textContent = "enviar mensagem";
+        submitButton.textContent = "enviar briefing";
     }
 }
 
