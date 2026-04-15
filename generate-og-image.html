@@ -1,18 +1,22 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <title>Gerar OG Image</title>
+    <title>Gerar Social Preview</title>
 </head>
-<body style="margin: 0; padding: 20px; background: #111; color: #fff; font-family: monospace;">
-    <h2>Instruções para gerar og-image.png:</h2>
-    <ol>
-        <li>Abra o arquivo <code>og-image.svg</code> no navegador</li>
-        <li>Tire um screenshot (1200x630px)</li>
-        <li>Salve como <code>og-image.png</code> na raiz do projeto</li>
+<body style="margin: 0; padding: 32px; background: #08090c; color: #f6f1e8; font-family: 'Segoe UI', Arial, sans-serif;">
+    <h1 style="margin: 0 0 12px; font-size: 28px;">Social preview do portfolio</h1>
+    <p style="margin: 0 0 24px; max-width: 720px; color: #c2bcaf;">
+        A fonte visual agora e <code>social-preview.svg</code>. O arquivo publicado nas metas e
+        <code>social-preview.png</code>, gerado a partir desse SVG para evitar problema de compatibilidade.
+    </p>
+    <ol style="margin: 0 0 28px; padding-left: 20px; color: #c2bcaf;">
+        <li>Edite <code>social-preview.svg</code> quando quiser mudar a thumbnail social.</li>
+        <li>Gere novamente <code>social-preview.png</code>.</li>
+        <li>Publique para renovar a miniatura ao compartilhar o link.</li>
     </ol>
-    <p>Ou use uma ferramenta online como <a href="https://cloudconvert.com/svg-to-png" target="_blank" style="color: #7F77DD;">CloudConvert</a></p>
-    <hr>
-    <p><strong>Alternativa:</strong> Use o próprio og-image.svg (alguns sites aceitam SVG)</p>
+    <div style="border: 1px solid rgba(255,255,255,0.08); border-radius: 20px; overflow: hidden; max-width: 1200px;">
+        <img src="social-preview.svg" alt="Preview social do portfolio" style="display: block; width: 100%; height: auto;">
+    </div>
 </body>
 </html>

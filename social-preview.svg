@@ -1,0 +1,98 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="panelGlow" x1="732" y1="96" x2="1092" y2="522" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#151a22"/>
+      <stop offset="1" stop-color="#0c1016"/>
+    </linearGradient>
+    <radialGradient id="goldGlow" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(930 110) rotate(120.533) scale(454.905 574.818)">
+      <stop offset="0" stop-color="#f0c419" stop-opacity="0.28"/>
+      <stop offset="1" stop-color="#f0c419" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="greenGlow" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(182 560) rotate(-25.8731) scale(282.152 232.777)">
+      <stop offset="0" stop-color="#4fd89e" stop-opacity="0.18"/>
+      <stop offset="1" stop-color="#4fd89e" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grid" width="44" height="44" patternUnits="userSpaceOnUse">
+      <path d="M44 0H0V44" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+    </pattern>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="16" stdDeviation="20" flood-color="#000000" flood-opacity="0.28"/>
+    </filter>
+  </defs>
+
+  <rect width="1200" height="630" fill="#08090c"/>
+  <rect width="1200" height="630" fill="url(#goldGlow)"/>
+  <rect width="1200" height="630" fill="url(#greenGlow)"/>
+  <rect width="1200" height="630" fill="url(#grid)" opacity="0.12"/>
+
+  <rect x="24" y="24" width="1152" height="582" rx="28" fill="#0c1016" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+  <rect x="24" y="24" width="1152" height="582" rx="28" fill="url(#goldGlow)" opacity="0.2"/>
+
+  <rect x="96" y="104" width="88" height="4" rx="2" fill="#f0c419"/>
+  <text x="96" y="148" fill="#f0c419" font-family="Consolas, 'Courier New', monospace" font-size="18" letter-spacing="4">APPS MOBILE, BACKEND E OPERACAO</text>
+
+  <text x="96" y="242" fill="#f6f1e8" font-family="'Segoe UI', Arial, sans-serif" font-size="84" font-weight="800" letter-spacing="-2">Mateus</text>
+  <text x="96" y="324" fill="#f0c419" font-family="'Segoe UI', Arial, sans-serif" font-size="84" font-weight="800" letter-spacing="-2">Serra</text>
+
+  <text x="96" y="388" fill="#c2bcaf" font-family="'Segoe UI', Arial, sans-serif" font-size="28">
+    <tspan x="96" dy="0">Do app React Native a API privada,</tspan>
+    <tspan x="96" dy="38">painel interno e rotina operacional.</tspan>
+  </text>
+
+  <g filter="url(#shadow)">
+    <rect x="96" y="458" width="172" height="56" rx="28" fill="#151a22" stroke="rgba(255,255,255,0.08)"/>
+    <text x="182" y="492" fill="#f6f1e8" font-family="Consolas, 'Courier New', monospace" font-size="16" text-anchor="middle">4 CASOS REAIS</text>
+
+    <rect x="282" y="458" width="202" height="56" rx="28" fill="#151a22" stroke="rgba(255,255,255,0.08)"/>
+    <text x="383" y="492" fill="#f6f1e8" font-family="Consolas, 'Courier New', monospace" font-size="16" text-anchor="middle">APP + API + PAINEL</text>
+
+    <rect x="498" y="458" width="204" height="56" rx="28" fill="#151a22" stroke="rgba(255,255,255,0.08)"/>
+    <text x="600" y="492" fill="#f6f1e8" font-family="Consolas, 'Courier New', monospace" font-size="16" text-anchor="middle">MVP EM PRODUCAO</text>
+  </g>
+
+  <g>
+    <circle cx="102" cy="560" r="7" fill="#4fd89e"/>
+    <text x="122" y="566" fill="#4fd89e" font-family="Consolas, 'Courier New', monospace" font-size="17" letter-spacing="1">DISPONIVEL PARA PROJETOS</text>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="770" y="100" width="330" height="248" rx="28" fill="url(#panelGlow)" stroke="rgba(255,255,255,0.08)"/>
+    <rect x="794" y="132" width="128" height="16" rx="8" fill="#1d2430"/>
+    <rect x="932" y="132" width="144" height="16" rx="8" fill="#121720"/>
+    <rect x="794" y="172" width="282" height="126" rx="18" fill="#0f141c" stroke="rgba(255,255,255,0.05)"/>
+    <rect x="814" y="192" width="92" height="78" rx="14" fill="#151c26"/>
+    <rect x="920" y="192" width="58" height="78" rx="14" fill="#171f2b"/>
+    <rect x="992" y="192" width="64" height="78" rx="14" fill="#171f2b"/>
+    <rect x="814" y="286" width="242" height="12" rx="6" fill="#1f2836"/>
+    <rect x="814" y="312" width="168" height="12" rx="6" fill="#253246"/>
+    <rect x="814" y="312" width="112" height="12" rx="6" fill="#f0c419"/>
+    <text x="794" y="326" fill="#f6f1e8" font-family="Consolas, 'Courier New', monospace" font-size="14">painel interno</text>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="698" y="220" width="138" height="252" rx="26" fill="#0d1218" stroke="rgba(255,255,255,0.08)"/>
+    <rect x="742" y="238" width="50" height="6" rx="3" fill="#232c38"/>
+    <rect x="718" y="266" width="98" height="78" rx="18" fill="#121923"/>
+    <rect x="730" y="282" width="74" height="10" rx="5" fill="#f0c419"/>
+    <rect x="730" y="300" width="58" height="8" rx="4" fill="#334156"/>
+    <rect x="718" y="362" width="98" height="14" rx="7" fill="#17202c"/>
+    <rect x="718" y="388" width="98" height="14" rx="7" fill="#17202c"/>
+    <rect x="718" y="414" width="76" height="14" rx="7" fill="#17202c"/>
+    <text x="767" y="455" fill="#f6f1e8" font-family="Consolas, 'Courier New', monospace" font-size="13" text-anchor="middle">app mobile</text>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="840" y="372" width="234" height="136" rx="22" fill="#0f141b" stroke="rgba(255,255,255,0.08)"/>
+    <rect x="862" y="396" width="94" height="12" rx="6" fill="#4fd89e" opacity="0.9"/>
+    <rect x="862" y="424" width="152" height="10" rx="5" fill="#273243"/>
+    <rect x="862" y="446" width="188" height="10" rx="5" fill="#1b2431"/>
+    <rect x="862" y="468" width="134" height="10" rx="5" fill="#273243"/>
+    <text x="862" y="493" fill="#f6f1e8" font-family="Consolas, 'Courier New', monospace" font-size="14">api privada</text>
+    <text x="862" y="511" fill="#918a7e" font-family="Consolas, 'Courier New', monospace" font-size="13">auth, regras, monitoramento</text>
+  </g>
+
+  <g>
+    <rect x="1000" y="88" width="104" height="40" rx="20" fill="#11161d" stroke="rgba(255,255,255,0.08)"/>
+    <text x="1052" y="114" fill="#f6f1e8" font-family="Consolas, 'Courier New', monospace" font-size="16" text-anchor="middle">ms.dev</text>
+  </g>
+</svg>
