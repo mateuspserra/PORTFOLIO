@@ -267,6 +267,25 @@ section {
     gap: 12px;
 }
 
+.hero-fit {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 26px;
+}
+
+.hero-fit span {
+    padding: 8px 12px;
+    border-radius: 999px;
+    border: 1px solid rgba(240, 196, 25, 0.16);
+    background: rgba(240, 196, 25, 0.08);
+    color: #f2d569;
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+
 .btn-primary,
 .btn-outline {
     display: inline-flex;
@@ -316,7 +335,7 @@ section {
     display: grid;
     gap: 14px;
     max-width: 520px;
-    margin-top: 36px;
+    margin-top: 28px;
     list-style: none;
 }
 
@@ -462,6 +481,13 @@ section {
     color: var(--text-dim);
     font-size: 15px;
     line-height: 1.8;
+}
+
+.project-note {
+    margin-top: 14px;
+    color: var(--text-muted);
+    font-size: 13px;
+    line-height: 1.7;
 }
 
 .project-highlights {
@@ -729,6 +755,27 @@ section {
     color: var(--accent);
 }
 
+.skill-group-copy {
+    margin-bottom: 18px;
+    color: var(--text-dim);
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+.skill-list {
+    display: grid;
+    gap: 12px;
+    list-style: none;
+}
+
+.skill-list li {
+    padding-top: 12px;
+    border-top: 1px solid var(--border);
+    color: var(--text-dim);
+    font-size: 14px;
+    line-height: 1.7;
+}
+
 .skill-item {
     display: flex;
     align-items: center;
@@ -780,10 +827,35 @@ section {
 }
 
 .contact-intro {
-    margin-bottom: 28px;
+    margin-bottom: 18px;
     font-size: 18px;
     line-height: 1.8;
     color: var(--text-dim);
+}
+
+.contact-points {
+    display: grid;
+    gap: 10px;
+    margin-bottom: 28px;
+    list-style: none;
+}
+
+.contact-points li {
+    padding-left: 18px;
+    position: relative;
+    color: var(--text-dim);
+    font-size: 15px;
+}
+
+.contact-points li::before {
+    content: "";
+    position: absolute;
+    top: 10px;
+    left: 0;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--accent);
 }
 
 .contact-links {
