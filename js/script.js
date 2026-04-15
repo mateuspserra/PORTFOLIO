@@ -39,6 +39,12 @@ const galleries = {
             src: "images/meus relatorios.png",
             alt: "Sistema de Relatorios - meus relatorios"
         }
+    ],
+    "monitor-api": [
+        {
+            src: "images/monitor api.png",
+            alt: "Monitor de APIs e Status"
+        }
     ]
 };
 
