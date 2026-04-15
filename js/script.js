@@ -1,206 +1,219 @@
-// Animação das barras de habilidades
-const bars = document.querySelectorAll('.skill-bar');
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach(e => {
-        if (e.isIntersecting) {
-            setTimeout(() => e.target.classList.add('animate'), 200);
-        }
-    });
-}, { threshold: 0.3 });
+const navToggle = document.querySelector(".nav-toggle");
+const navPanel = document.querySelector(".nav-panel");
+const navLinks = document.querySelectorAll(".nav-panel a");
+const bars = document.querySelectorAll(".skill-bar");
+const revealItems = document.querySelectorAll(".reveal");
+const form = document.querySelector(".contact-form");
+const statusMessage = document.getElementById("form-status");
 
-bars.forEach(b => observer.observe(b));
+const lightbox = document.getElementById("lightbox");
+const lightboxImage = document.getElementById("lightbox-image");
+const lightboxCounter = document.getElementById("lightbox-counter");
+const lightboxClose = document.querySelector(".lightbox-close");
+const lightboxPrev = document.querySelector(".lightbox-arrow.prev");
+const lightboxNext = document.querySelector(".lightbox-arrow.next");
+const galleryTriggers = document.querySelectorAll("[data-open-gallery]");
+const gallerySources = document.querySelectorAll("[data-gallery]");
 
-// Manipulador do formulário de contato com Formspree
-function handleSubmit(e) {
-    const btn = e.target.querySelector('.form-submit');
-    const form = e.target;
-    
-    // Desabilita o botão durante o envio
-    btn.disabled = true;
-    btn.textContent = 'enviando...';
-    
-    // Deixa o Formspree processar o envio
-    // Após o envio, mostra feedback visual
-    setTimeout(() => {
-        btn.textContent = 'mensagem enviada ✓';
-        btn.style.background = '#1D9E75';
-        
-        setTimeout(() => {
-            btn.textContent = 'enviar mensagem';
-            btn.style.background = '';
-            btn.disabled = false;
-            form.reset();
-        }, 3000);
-    }, 1000);
-}
-
-// Slider de imagens dos projetos
-const sliderStates = {};
-
-function initSlider(projectId) {
-    if (!sliderStates[projectId]) {
-        sliderStates[projectId] = { currentIndex: 0 };
-    }
-}
-
-function moveSlider(projectId, direction) {
-    initSlider(projectId);
-    const slider = document.getElementById(`slider-${projectId}`);
-    const dots = document.getElementById(`dots-${projectId}`).children;
-    const totalSlides = slider.children.length;
-    
-    sliderStates[projectId].currentIndex += direction;
-    
-    if (sliderStates[projectId].currentIndex < 0) {
-        sliderStates[projectId].currentIndex = totalSlides - 1;
-    } else if (sliderStates[projectId].currentIndex >= totalSlides) {
-        sliderStates[projectId].currentIndex = 0;
-    }
-    
-    updateSlider(projectId, slider, dots);
-}
-
-function goToSlide(projectId, index) {
-    initSlider(projectId);
-    const slider = document.getElementById(`slider-${projectId}`);
-    const dots = document.getElementById(`dots-${projectId}`).children;
-    
-    sliderStates[projectId].currentIndex = index;
-    updateSlider(projectId, slider, dots);
-}
-
-function updateSlider(projectId, slider, dots) {
-    const currentIndex = sliderStates[projectId].currentIndex;
-    slider.style.transform = `translateX(-${currentIndex * 100}%)`;
-    
-    Array.from(dots).forEach((dot, i) => {
-        dot.classList.toggle('active', i === currentIndex);
-    });
-}
-
-// Auto-play dos sliders (opcional)
-function autoPlaySliders() {
-    Object.keys(sliderStates).forEach(projectId => {
-        moveSlider(projectId, 1);
-    });
-}
-
-// Inicializar sliders
-document.addEventListener('DOMContentLoaded', () => {
-    // Sliders removidos - usando imagens únicas
-});
-
-// Lightbox para visualizar imagens em tamanho maior
-let lightboxState = {
-    projectId: null,
-    currentIndex: 0,
-    images: []
+const lightboxState = {
+    galleryId: null,
+    currentIndex: 0
 };
 
-function openLightboxFromSlider(projectId) {
-    const slider = document.getElementById(`slider-${projectId}`);
-    if (!slider) return;
-    
-    const images = Array.from(slider.children);
-    const currentIndex = sliderStates[projectId] ? sliderStates[projectId].currentIndex : 0;
-    
-    lightboxState.projectId = projectId;
-    lightboxState.currentIndex = currentIndex;
-    lightboxState.images = images.map(img => ({
-        src: img.src,
-        alt: img.alt
-    }));
-    
-    updateLightbox();
-    document.getElementById('lightbox').classList.add('active');
-    document.body.style.overflow = 'hidden';
+const galleries = Array.from(gallerySources).reduce((acc, item) => {
+    const key = item.dataset.gallery;
+    acc[key] = acc[key] || [];
+    acc[key].push({
+        src: item.getAttribute("src"),
+        alt: item.getAttribute("alt") || ""
+    });
+    return acc;
+}, {});
+
+function setNavState(isOpen) {
+    if (!navToggle || !navPanel) {
+        return;
+    }
+
+    navToggle.setAttribute("aria-expanded", String(isOpen));
+    navPanel.classList.toggle("is-open", isOpen);
+    document.body.classList.toggle("nav-open", isOpen);
 }
 
-function openLightbox(projectId, index) {
-    // Para sliders
-    const slider = document.getElementById(`slider-${projectId}`);
-    
-    if (slider) {
-        const images = Array.from(slider.children);
-        lightboxState.projectId = projectId;
-        lightboxState.currentIndex = index || 0;
-        lightboxState.images = images.map(img => ({
-            src: img.src,
-            alt: img.alt
-        }));
-    } else {
-        // Para imagens únicas (não slider)
-        const singleImage = document.querySelector(`img[onclick*="${projectId}"]`);
-        
-        if (singleImage) {
-            lightboxState.projectId = projectId;
-            lightboxState.currentIndex = 0;
-            lightboxState.images = [{
-                src: singleImage.src,
-                alt: singleImage.alt
-            }];
+if (navToggle) {
+    navToggle.addEventListener("click", () => {
+        const isOpen = navToggle.getAttribute("aria-expanded") === "true";
+        setNavState(!isOpen);
+    });
+}
+
+navLinks.forEach((link) => {
+    link.addEventListener("click", () => setNavState(false));
+});
+
+const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+        if (!entry.isIntersecting) {
+            return;
         }
+
+        entry.target.classList.add("is-visible");
+        revealObserver.unobserve(entry.target);
+    });
+}, { threshold: 0.2 });
+
+revealItems.forEach((item) => revealObserver.observe(item));
+
+const skillObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+        if (!entry.isIntersecting) {
+            return;
+        }
+
+        entry.target.classList.add("animate");
+        skillObserver.unobserve(entry.target);
+    });
+}, { threshold: 0.35 });
+
+bars.forEach((bar) => skillObserver.observe(bar));
+
+function openLightbox(galleryId, index = 0) {
+    const gallery = galleries[galleryId];
+
+    if (!gallery || !gallery.length) {
+        return;
     }
-    
+
+    lightboxState.galleryId = galleryId;
+    lightboxState.currentIndex = index;
+
     updateLightbox();
-    document.getElementById('lightbox').classList.add('active');
-    document.body.style.overflow = 'hidden';
+    lightbox.classList.add("active");
+    lightbox.setAttribute("aria-hidden", "false");
+    document.body.style.overflow = "hidden";
 }
 
-function closeLightbox(event) {
-    if (event.target.id === 'lightbox' || event.target.classList.contains('lightbox-close')) {
-        document.getElementById('lightbox').classList.remove('active');
-        document.body.style.overflow = '';
-    }
-}
-
-function lightboxNavigate(direction) {
-    // Só navega se tiver mais de uma imagem
-    if (lightboxState.images.length <= 1) return;
-    
-    lightboxState.currentIndex += direction;
-    
-    if (lightboxState.currentIndex < 0) {
-        lightboxState.currentIndex = lightboxState.images.length - 1;
-    } else if (lightboxState.currentIndex >= lightboxState.images.length) {
-        lightboxState.currentIndex = 0;
-    }
-    
-    updateLightbox();
+function closeLightbox() {
+    lightbox.classList.remove("active");
+    lightbox.setAttribute("aria-hidden", "true");
+    document.body.style.overflow = "";
 }
 
 function updateLightbox() {
-    const img = document.getElementById('lightbox-image');
-    const counter = document.getElementById('lightbox-counter');
-    const arrows = document.querySelectorAll('.lightbox-arrow');
-    const current = lightboxState.images[lightboxState.currentIndex];
-    
-    img.src = current.src;
-    img.alt = current.alt;
-    
-    // Mostrar/ocultar contador e setas se tiver apenas 1 imagem
-    if (lightboxState.images.length > 1) {
-        counter.textContent = `${lightboxState.currentIndex + 1} / ${lightboxState.images.length}`;
-        counter.style.display = 'block';
-        arrows.forEach(arrow => arrow.style.display = 'flex');
+    const gallery = galleries[lightboxState.galleryId];
+
+    if (!gallery || !gallery.length) {
+        return;
+    }
+
+    const current = gallery[lightboxState.currentIndex];
+    const hasMultipleImages = gallery.length > 1;
+
+    lightboxImage.src = current.src;
+    lightboxImage.alt = current.alt;
+    lightboxCounter.textContent = `${lightboxState.currentIndex + 1} / ${gallery.length}`;
+    lightboxCounter.style.display = hasMultipleImages ? "block" : "none";
+    lightboxPrev.style.display = hasMultipleImages ? "inline-flex" : "none";
+    lightboxNext.style.display = hasMultipleImages ? "inline-flex" : "none";
+}
+
+function navigateLightbox(direction) {
+    const gallery = galleries[lightboxState.galleryId];
+
+    if (!gallery || gallery.length <= 1) {
+        return;
+    }
+
+    const nextIndex = lightboxState.currentIndex + direction;
+
+    if (nextIndex < 0) {
+        lightboxState.currentIndex = gallery.length - 1;
+    } else if (nextIndex >= gallery.length) {
+        lightboxState.currentIndex = 0;
     } else {
-        counter.style.display = 'none';
-        arrows.forEach(arrow => arrow.style.display = 'none');
+        lightboxState.currentIndex = nextIndex;
+    }
+
+    updateLightbox();
+}
+
+galleryTriggers.forEach((trigger) => {
+    trigger.addEventListener("click", () => {
+        openLightbox(trigger.dataset.openGallery, Number(trigger.dataset.index || 0));
+    });
+});
+
+lightbox.addEventListener("click", (event) => {
+    if (event.target === lightbox) {
+        closeLightbox();
+    }
+});
+
+lightboxClose.addEventListener("click", closeLightbox);
+lightboxPrev.addEventListener("click", () => navigateLightbox(-1));
+lightboxNext.addEventListener("click", () => navigateLightbox(1));
+
+document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") {
+        if (lightbox.classList.contains("active")) {
+            closeLightbox();
+            return;
+        }
+
+        if (navPanel && navPanel.classList.contains("is-open")) {
+            setNavState(false);
+        }
+    }
+
+    if (!lightbox.classList.contains("active")) {
+        return;
+    }
+
+    if (event.key === "ArrowLeft") {
+        navigateLightbox(-1);
+    }
+
+    if (event.key === "ArrowRight") {
+        navigateLightbox(1);
+    }
+});
+
+async function handleSubmit(event) {
+    event.preventDefault();
+
+    const submitButton = form.querySelector(".form-submit");
+    const formData = new FormData(form);
+
+    submitButton.disabled = true;
+    submitButton.textContent = "enviando...";
+    statusMessage.textContent = "";
+    statusMessage.className = "form-status";
+
+    try {
+        const response = await fetch(form.action, {
+            method: "POST",
+            body: formData,
+            headers: {
+                Accept: "application/json"
+            }
+        });
+
+        if (!response.ok) {
+            throw new Error("request_failed");
+        }
+
+        form.reset();
+        statusMessage.textContent = "Mensagem enviada. Retorno em ate 24h.";
+        statusMessage.classList.add("success");
+    } catch (error) {
+        statusMessage.textContent = "Nao consegui enviar agora. Tente novamente ou use o email direto.";
+        statusMessage.classList.add("error");
+    } finally {
+        submitButton.disabled = false;
+        submitButton.textContent = "enviar mensagem";
     }
 }
 
-// Fechar lightbox com ESC
-document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape') {
-        document.getElementById('lightbox').classList.remove('active');
-        document.body.style.overflow = '';
-    } else if (e.key === 'ArrowLeft') {
-        if (document.getElementById('lightbox').classList.contains('active')) {
-            lightboxNavigate(-1);
-        }
-    } else if (e.key === 'ArrowRight') {
-        if (document.getElementById('lightbox').classList.contains('active')) {
-            lightboxNavigate(1);
-        }
-    }
-});
+if (form) {
+    form.addEventListener("submit", handleSubmit);
+}

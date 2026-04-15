@@ -3,93 +3,127 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- SEO -->
-    <title>Ms.dev — Desenvolvedor Mobile & Full-Stack</title>
-    <meta name="description" content="Desenvolvedor full-stack especializado em criar apps mobile e APIs robustas. React Native, Python, Flask, PostgreSQL.">
+
+    <title>Mateus Serra | Desenvolvedor Mobile e Backend</title>
+    <meta name="description" content="Portfolio de Mateus Serra, desenvolvedor focado em React Native, Python, Flask, PostgreSQL e operacao de produto em producao.">
     <meta name="author" content="Mateus Serra">
     <meta name="keywords" content="desenvolvedor, react native, python, flask, mobile, backend, portfolio">
-    
-    <!-- Open Graph / Facebook -->
+    <meta name="theme-color" content="#08090c">
+
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://ms-dev-portfolio.vercel.app/">
-    <meta property="og:title" content="Ms.dev — Desenvolvedor Mobile & Full-Stack">
-    <meta property="og:description" content="Desenvolvedor full-stack especializado em criar apps mobile e APIs robustas. React Native, Python, Flask, PostgreSQL.">
+    <meta property="og:title" content="Mateus Serra | Desenvolvedor Mobile e Backend">
+    <meta property="og:description" content="Apps Android, APIs Flask e ferramentas internas construidas com foco em produto, operacao e deploy real.">
     <meta property="og:image" content="https://ms-dev-portfolio.vercel.app/og-image.png">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
-    
-    <!-- Twitter -->
+
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://ms-dev-portfolio.vercel.app/">
-    <meta property="twitter:title" content="Ms.dev — Desenvolvedor Mobile & Full-Stack">
-    <meta property="twitter:description" content="Desenvolvedor full-stack especializado em criar apps mobile e APIs robustas. React Native, Python, Flask, PostgreSQL.">
+    <meta property="twitter:title" content="Mateus Serra | Desenvolvedor Mobile e Backend">
+    <meta property="twitter:description" content="Apps Android, APIs Flask e ferramentas internas construidas com foco em produto, operacao e deploy real.">
     <meta property="twitter:image" content="https://ms-dev-portfolio.vercel.app/og-image.png">
-    
-    <!-- Favicon -->
+
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
-    
-    <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Syne:wght@400;500;700;800&display=swap" rel="stylesheet">
-    
-    <!-- Styles -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Syne:wght@400;500;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <nav>
-        <span class="nav-logo">ms.dev</span>
-        <ul class="nav-links">
-            <li><a href="#projetos">projetos</a></li>
-            <li><a href="#sobre">sobre</a></li>
-            <li><a href="#skills">skills</a></li>
-            <li><a href="#contato">contato</a></li>
-        </ul>
-        <div class="nav-dot" title="disponível para projetos"></div>
+    <div class="page-noise" aria-hidden="true"></div>
+
+    <nav class="site-nav">
+        <a href="#hero" class="nav-logo">ms.dev</a>
+
+        <button
+            class="nav-toggle"
+            type="button"
+            aria-label="Abrir menu"
+            aria-expanded="false"
+            aria-controls="nav-panel"
+        >
+            menu
+        </button>
+
+        <div class="nav-panel" id="nav-panel">
+            <ul class="nav-links">
+                <li><a href="#projetos">projetos</a></li>
+                <li><a href="#sobre">sobre</a></li>
+                <li><a href="#skills">skills</a></li>
+                <li><a href="#contato">contato</a></li>
+            </ul>
+            <a href="#contato" class="nav-cta">falar comigo</a>
+        </div>
+
+        <div class="nav-status">
+            <span class="nav-dot" aria-hidden="true"></span>
+            <span>dispon&iacute;vel para projetos</span>
+        </div>
     </nav>
 
-    <section class="hero" id="hero">
-        <div class="hero-eyebrow fade-in">desenvolvedor full-stack</div>
-        <h1 class="hero-name fade-in">Mateus<br><span class="accent">Serra</span></h1>
-        <p class="hero-role fade-in">// Python · JavaScript · React Native · Flask</p>
-        <p class="hero-desc fade-in">Construo sistemas robustos e interfaces que fazem sentido — do banco de dados à tela do usuário.</p>
-        <div class="hero-actions fade-in">
-            <a href="#projetos" class="btn-primary">ver projetos</a>
-            <a href="#contato" class="btn-outline">falar comigo</a>
-        </div>
-        <div class="hero-stats fade-in">
-            <div>
-                <div class="stat-num">1+</div>
-                <div class="stat-label">ano de exp.</div>
-            </div>
-            <div>
-                <div class="stat-num">3</div>
-                <div class="stat-label">projetos entregues</div>
-            </div>
-            <div>
-                <div class="stat-num">4</div>
-                <div class="stat-label">stacks dominadas</div>
-            </div>
-        </div>
-    </section>
+    <main>
+        <section class="hero" id="hero">
+            <div class="hero-copy">
+                <p class="hero-eyebrow fade-in">mobile, backend e produto digital</p>
+                <h1 class="hero-name fade-in">Mateus<br><span>Serra</span></h1>
+                <p class="hero-role fade-in">// React Native, Python, Flask e opera&ccedil;&atilde;o em produ&ccedil;&atilde;o</p>
+                <p class="hero-desc fade-in">
+                    Construo apps Android, APIs robustas e pain&eacute;is internos com foco em clareza t&eacute;cnica,
+                    usabilidade e entrega real.
+                </p>
 
-    <section id="projetos">
-        <div class="section-header">
-            <span class="section-num">01</span>
-            <h2 class="section-title">projetos</h2>
-            <div class="section-line"></div>
-        </div>
-        <div class="projects-grid">
-            <div class="project-card">
-                <div class="project-image">
-                    <div class="project-image-placeholder">
-                        screenshot do projeto<br>1600x900px recomendado
-                    </div>
-                    <div class="project-badge">aguardando screenshot</div>
+                <div class="hero-actions fade-in">
+                    <a href="#projetos" class="btn-primary">ver projetos</a>
+                    <a href="#contato" class="btn-outline">iniciar conversa</a>
                 </div>
-                <div class="project-content">
-                    <div class="project-num">projeto — 01</div>
+
+                <ul class="hero-proof fade-in">
+                    <li>Apps com offline, OCR, PDF e notifica&ccedil;&otilde;es push</li>
+                    <li>Backends Flask com JWT, OAuth2, billing e automa&ccedil;&atilde;o</li>
+                    <li>Deploy, monitoramento e ferramentas internas para operar produto</li>
+                </ul>
+            </div>
+
+            <div class="hero-visual fade-in">
+                <div class="hero-visual-frame">
+                    <img src="images/painel admin.png" alt="Preview do painel administrativo do MotoTracker">
+                </div>
+                <div class="hero-visual-meta">
+                    <span>ecossistema MotoTracker</span>
+                    <span>app, API e painel admin</span>
+                </div>
+            </div>
+        </section>
+
+        <section id="projetos">
+            <div class="section-header">
+                <span class="section-num">01</span>
+                <h2 class="section-title">projetos</h2>
+                <div class="section-line"></div>
+            </div>
+
+            <p class="section-copy">
+                Trabalhos selecionados que mostram produto, opera&ccedil;&atilde;o e automa&ccedil;&atilde;o no mesmo stack.
+            </p>
+
+            <article class="project-feature reveal">
+                <div class="project-content project-content-feature">
+                    <div class="project-num">projeto 01</div>
                     <h3 class="project-title">MotoTracker</h3>
-                    <p class="project-desc">Produto completo para motoboys — app Android (React Native + Expo) com OCR de quilometragem, notificações push, relatórios em PDF e modo offline, integrado a uma API REST em Flask com autenticação JWT, Google OAuth2, sistema de assinaturas, painel admin e deploy automatizado no Railway.</p>
+                    <p class="project-desc">
+                        Produto completo para motoboys com app Android em React Native + Expo, OCR de quilometragem,
+                        notifica&ccedil;&otilde;es push, relat&oacute;rios em PDF, modo offline, API REST em Flask,
+                        autentica&ccedil;&atilde;o JWT, Google OAuth2, assinaturas e deploy automatizado.
+                    </p>
+
+                    <div class="project-highlights">
+                        <span>OCR de quilometragem</span>
+                        <span>modo offline</span>
+                        <span>relat&oacute;rios PDF</span>
+                        <span>notifica&ccedil;&otilde;es push</span>
+                    </div>
+
                     <div class="project-tags">
                         <span class="tag">React Native</span>
                         <span class="tag">Expo</span>
@@ -99,232 +133,303 @@
                         <span class="tag">Redis</span>
                         <span class="tag">Docker</span>
                     </div>
-                    <a href="https://mototrackersite.vercel.app/" class="project-link">ver projeto →</a>
+
+                    <div class="project-actions">
+                        <a href="https://mototrackersite.vercel.app/" class="project-link" target="_blank" rel="noreferrer">visitar landing</a>
+                        <a href="#contato" class="project-link ghost">quero algo assim</a>
+                    </div>
                 </div>
+
+                <div class="project-ecosystem" aria-hidden="true">
+                    <div class="ecosystem-node">
+                        <span>app Android</span>
+                        <strong>React Native + Expo</strong>
+                    </div>
+                    <div class="ecosystem-node">
+                        <span>API REST</span>
+                        <strong>Flask + PostgreSQL</strong>
+                    </div>
+                    <div class="ecosystem-node">
+                        <span>opera&ccedil;&atilde;o</span>
+                        <strong>Painel admin web</strong>
+                    </div>
+                    <div class="ecosystem-node">
+                        <span>assinaturas</span>
+                        <strong>billing + automa&ccedil;&atilde;o</strong>
+                    </div>
+                    <div class="ecosystem-note">OCR &bull; offline &bull; push &bull; JWT &bull; relat&oacute;rios &bull; deploy</div>
+                </div>
+            </article>
+
+            <div class="projects-grid">
+                <article class="project-card reveal">
+                    <div class="project-image">
+                        <img
+                            src="images/painel admin.png"
+                            alt="MotoTracker Painel Admin"
+                            class="project-shot"
+                            data-open-gallery="painel-admin"
+                        >
+                        <button type="button" class="project-badge" data-open-gallery="painel-admin">ampliar screenshot</button>
+                    </div>
+
+                    <div class="project-content">
+                        <div class="project-num">projeto 02</div>
+                        <h3 class="project-title">MotoTracker Admin</h3>
+                        <p class="project-desc">
+                            Interface web de opera&ccedil;&atilde;o do ecossistema MotoTracker feita em HTML, CSS e JavaScript
+                            vanilla para gerenciar usu&aacute;rios, assinaturas, m&eacute;tricas, push, suporte e rotinas internas.
+                        </p>
+
+                        <div class="project-tags">
+                            <span class="tag">HTML</span>
+                            <span class="tag">CSS</span>
+                            <span class="tag">JavaScript</span>
+                            <span class="tag">Chart.js</span>
+                            <span class="tag">JWT</span>
+                            <span class="tag">Vercel</span>
+                        </div>
+
+                        <div class="project-actions">
+                            <button type="button" class="project-link project-link-button" data-open-gallery="painel-admin">abrir preview</button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="project-card reveal">
+                    <div class="project-image">
+                        <img
+                            src="images/lj relatorios.png"
+                            alt="Sistema de Relatorios"
+                            class="project-shot"
+                            data-open-gallery="sistema-relatorios"
+                        >
+                        <button type="button" class="project-badge" data-open-gallery="sistema-relatorios">ver telas</button>
+                    </div>
+
+                    <div class="project-content">
+                        <div class="project-num">projeto 03</div>
+                        <h3 class="project-title">Sistema de Relat&oacute;rios</h3>
+                        <p class="project-desc">
+                            Sistema pessoal para gerar relat&oacute;rios de est&aacute;gio em DOCX com dashboard, hist&oacute;rico,
+                            upload via JSON e deploy containerizado para uso pr&oacute;prio.
+                        </p>
+
+                        <div class="project-tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">Flask</span>
+                            <span class="tag">PostgreSQL</span>
+                            <span class="tag">Supabase</span>
+                            <span class="tag">python-docx</span>
+                            <span class="tag">Docker</span>
+                        </div>
+
+                        <div class="project-actions">
+                            <button type="button" class="project-link project-link-button" data-open-gallery="sistema-relatorios">abrir galeria</button>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section id="sobre">
+            <div class="section-header">
+                <span class="section-num">02</span>
+                <h2 class="section-title">sobre</h2>
+                <div class="section-line"></div>
             </div>
 
-            <div class="project-card">
-                <div class="project-image">
-                    <img src="images/painel-admin.png" alt="MotoTracker Painel Admin" onclick="openLightbox('painel-admin', 0)" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                    <div class="project-image-placeholder" style="display: none;">
-                        screenshot do projeto<br>1200x600px recomendado
-                    </div>
-                    <div class="project-badge">screenshot do projeto</div>
+            <div class="about-grid">
+                <div class="about-text reveal">
+                    <p>
+                        Sou <strong>Mateus Serra</strong>, desenvolvedor com foco em construir aplica&ccedil;&otilde;es mobile,
+                        APIs e ferramentas internas que resolvem problemas reais.
+                    </p>
+                    <p>
+                        Hoje trabalho principalmente com <strong>React Native e Python/Flask</strong>, conectando experi&ecirc;ncia
+                        do usu&aacute;rio, regras de neg&oacute;cio e opera&ccedil;&atilde;o do produto sem separar demais as camadas.
+                    </p>
+                    <p>
+                        Gosto de projetos que precisam sair do prot&oacute;tipo e virar rotina: autentica&ccedil;&atilde;o, billing,
+                        automa&ccedil;&atilde;o, deploy, monitoramento e um front-end que n&atilde;o atrapalha quem usa.
+                    </p>
                 </div>
-                <div class="project-content">
-                    <div class="project-num">projeto — 02</div>
-                    <h3 class="project-title">MotoTracker — Painel Admin</h3>
-                    <p class="project-desc">Interface web de gerenciamento completo do ecossistema MotoTracker — construída do zero em HTML, CSS e JavaScript vanilla, sem frameworks. O painel concentra toda a operação do produto: gestão de usuários e assinaturas, acompanhamento de MRR e funil de conversão, disparo de notificações push em massa, automação de e-mails, emissão de cupons promocionais, gerenciamento de suporte e ferramentas internas como impersonação de usuário e publicação de novas versões do app. Deploy na Vercel com acesso restrito por autenticação JWT via API Flask.</p>
-                    <div class="project-tags">
-                        <span class="tag">HTML</span>
-                        <span class="tag">CSS</span>
-                        <span class="tag">JavaScript</span>
-                        <span class="tag">Chart.js</span>
-                        <span class="tag">Flask</span>
-                        <span class="tag">JWT</span>
-                        <span class="tag">Vercel</span>
+
+                <div class="about-rail reveal">
+                    <div class="about-panel">
+                        <span class="about-panel-title">foco atual</span>
+                        <p>Apps Android, APIs Flask e pain&eacute;is internos para opera&ccedil;&atilde;o.</p>
+                    </div>
+
+                    <div class="about-panel">
+                        <span class="about-panel-title">modo de trabalho</span>
+                        <p>Escopo enxuto, decis&atilde;o r&aacute;pida, itera&ccedil;&atilde;o curta e entrega orientada a produ&ccedil;&atilde;o.</p>
+                    </div>
+
+                    <div class="about-panel">
+                        <span class="about-panel-title">stack base</span>
+                        <p>Python, JavaScript, React Native, Flask, PostgreSQL, Redis e deploy em nuvem.</p>
+                    </div>
+
+                    <div class="availability-badge">
+                        <span class="avail-dot" aria-hidden="true"></span>
+                        dispon&iacute;vel para novos projetos
                     </div>
                 </div>
+            </div>
+        </section>
+
+        <section id="skills">
+            <div class="section-header">
+                <span class="section-num">03</span>
+                <h2 class="section-title">skills</h2>
+                <div class="section-line"></div>
             </div>
 
-            <div class="project-card">
-                <div class="project-image">
-                    <img src="images/sistema-relatorios.png" alt="Sistema de Relatórios" onclick="openLightbox('sistema-relatorios', 0)" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                    <div class="project-image-placeholder" style="display: none;">
-                        screenshot do projeto<br>1600x900px recomendado
-                    </div>
-                    <div class="project-badge">screenshot</div>
-                </div>
-                <div class="project-content">
-                    <div class="project-num">projeto — 03</div>
-                    <h3 class="project-title">Sistema de Relatórios — Projeto Pessoal</h3>
-                    <p class="project-desc">Sistema web que desenvolvi para automatizar a geração dos meus relatórios de estágio em DOCX. Inclui dashboard pessoal, histórico de relatórios, upload de dados via JSON e deploy containerizado para uso próprio.</p>
-                    <div class="project-tags">
-                        <span class="tag">Python</span>
-                        <span class="tag">Flask</span>
-                        <span class="tag">PostgreSQL</span>
-                        <span class="tag">Supabase</span>
-                        <span class="tag">python-docx</span>
-                        <span class="tag">Docker</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+            <p class="section-copy">
+                Ferramentas e stacks que uso com mais frequ&ecirc;ncia no ciclo completo do produto.
+            </p>
 
-    <section id="sobre">
-        <div class="section-header">
-            <span class="section-num">02</span>
-            <h2 class="section-title">sobre mim</h2>
-            <div class="section-line"></div>
-        </div>
-        <div class="about-grid">
-            <div class="about-text">
-                <p>Sou <strong>Mateus Serra</strong>, desenvolvedor com foco em criar aplicações mobile e APIs robustas que resolvem problemas reais.</p>
-                <p>Trabalho principalmente com <strong>React Native e Python/Flask</strong>, construindo desde apps Android completos até backends escaláveis com autenticação, integrações e deploy automatizado.</p>
-                <p>Gosto de projetos que combinam <strong>experiência do usuário fluida no mobile</strong> com <strong>arquiteturas backend bem estruturadas</strong>, sempre buscando código limpo e soluções práticas.</p>
-            </div>
-            <div class="about-aside">
-                <div class="info-row">
-                    <span class="info-label">localização</span>
-                    <span class="info-value">Brasil</span>
+            <div class="skills-grid">
+                <div class="skill-group reveal">
+                    <div class="skill-group-title">mobile</div>
+                    <div class="skill-item">
+                        <span class="skill-name">React Native / Expo</span>
+                        <div class="skill-bar-wrap">
+                            <div class="skill-bar" style="--level: 88%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">JavaScript</span>
+                        <div class="skill-bar-wrap">
+                            <div class="skill-bar" style="--level: 90%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">Zustand</span>
+                        <div class="skill-bar-wrap">
+                            <div class="skill-bar" style="--level: 80%;"></div>
+                        </div>
+                    </div>
                 </div>
-                <div class="info-row">
-                    <span class="info-label">foco atual</span>
-                    <span class="info-value">Mobile & Backend APIs</span>
-                </div>
-                <div class="info-row">
-                    <span class="info-label">stacks</span>
-                    <span class="info-value">Python · JS · React Native</span>
-                </div>
-                <div class="info-row">
-                    <span class="info-label">experiência</span>
-                    <span class="info-value">1+ ano</span>
-                </div>
-                <div class="availability-badge">
-                    <div class="avail-dot"></div>
-                    disponível para projetos
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <section id="skills">
-        <div class="section-header">
-            <span class="section-num">03</span>
-            <h2 class="section-title">habilidades</h2>
-            <div class="section-line"></div>
-        </div>
-        <div class="skills-grid">
-            <div class="skill-group">
-                <div class="skill-group-title">// mobile</div>
-                <div class="skill-item">
-                    <span class="skill-name">React Native / Expo</span>
-                    <div class="skill-bar-wrap">
-                        <div class="skill-bar" style="width:88%"></div>
+                <div class="skill-group reveal">
+                    <div class="skill-group-title">back-end</div>
+                    <div class="skill-item">
+                        <span class="skill-name">Python / Flask</span>
+                        <div class="skill-bar-wrap">
+                            <div class="skill-bar" style="--level: 92%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">JWT / OAuth2</span>
+                        <div class="skill-bar-wrap">
+                            <div class="skill-bar" style="--level: 85%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">SQLAlchemy / Alembic</span>
+                        <div class="skill-bar-wrap">
+                            <div class="skill-bar" style="--level: 82%;"></div>
+                        </div>
                     </div>
                 </div>
-                <div class="skill-item">
-                    <span class="skill-name">JavaScript</span>
-                    <div class="skill-bar-wrap">
-                        <div class="skill-bar" style="width:90%"></div>
+
+                <div class="skill-group reveal">
+                    <div class="skill-group-title">infra e dados</div>
+                    <div class="skill-item">
+                        <span class="skill-name">PostgreSQL</span>
+                        <div class="skill-bar-wrap">
+                            <div class="skill-bar" style="--level: 85%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">Redis / Celery</span>
+                        <div class="skill-bar-wrap">
+                            <div class="skill-bar" style="--level: 75%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">Docker / Railway</span>
+                        <div class="skill-bar-wrap">
+                            <div class="skill-bar" style="--level: 78%;"></div>
+                        </div>
                     </div>
                 </div>
-                <div class="skill-item">
-                    <span class="skill-name">Zustand</span>
-                    <div class="skill-bar-wrap">
-                        <div class="skill-bar" style="width:80%"></div>
-                    </div>
-                </div>
+            </div>
+        </section>
+
+        <section id="contato">
+            <div class="section-header">
+                <span class="section-num">04</span>
+                <h2 class="section-title">contato</h2>
+                <div class="section-line"></div>
             </div>
 
-            <div class="skill-group">
-                <div class="skill-group-title">// back-end</div>
-                <div class="skill-item">
-                    <span class="skill-name">Python / Flask</span>
-                    <div class="skill-bar-wrap">
-                        <div class="skill-bar" style="width:92%"></div>
-                    </div>
-                </div>
-                <div class="skill-item">
-                    <span class="skill-name">JWT / OAuth2</span>
-                    <div class="skill-bar-wrap">
-                        <div class="skill-bar" style="width:85%"></div>
-                    </div>
-                </div>
-                <div class="skill-item">
-                    <span class="skill-name">SQLAlchemy / Alembic</span>
-                    <div class="skill-bar-wrap">
-                        <div class="skill-bar" style="width:82%"></div>
-                    </div>
-                </div>
-            </div>
+            <div class="contact-layout">
+                <div class="contact-copy reveal">
+                    <p class="contact-intro">
+                        Se voc&ecirc; quer tirar uma ideia do papel, melhorar um produto existente ou montar a base t&eacute;cnica
+                        de algo novo, me manda uma mensagem.
+                    </p>
 
-            <div class="skill-group">
-                <div class="skill-group-title">// infra & dados</div>
-                <div class="skill-item">
-                    <span class="skill-name">PostgreSQL</span>
-                    <div class="skill-bar-wrap">
-                        <div class="skill-bar" style="width:85%"></div>
+                    <div class="contact-links">
+                        <a href="mailto:serramateus1@gmail.com" class="contact-link">
+                            <span class="contact-link-label">email</span>
+                            <span>serramateus1@gmail.com</span>
+                        </a>
+                        <a href="https://github.com/mateuspserra" class="contact-link" target="_blank" rel="noreferrer">
+                            <span class="contact-link-label">github</span>
+                            <span>github.com/mateuspserra</span>
+                        </a>
+                        <a href="https://www.linkedin.com/in/mateusserra/" class="contact-link" target="_blank" rel="noreferrer">
+                            <span class="contact-link-label">linkedin</span>
+                            <span>linkedin.com/in/mateusserra</span>
+                        </a>
                     </div>
                 </div>
-                <div class="skill-item">
-                    <span class="skill-name">Redis / Celery</span>
-                    <div class="skill-bar-wrap">
-                        <div class="skill-bar" style="width:75%"></div>
-                    </div>
-                </div>
-                <div class="skill-item">
-                    <span class="skill-name">Docker / Railway</span>
-                    <div class="skill-bar-wrap">
-                        <div class="skill-bar" style="width:78%"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <section id="contato">
-        <div class="section-header">
-            <span class="section-num">04</span>
-            <h2 class="section-title">contato</h2>
-            <div class="section-line"></div>
-        </div>
-        <div class="contact-layout">
-            <div>
-                <p class="contact-intro">Tem um projeto em mente ou quer trocar uma ideia? Manda uma mensagem — respondo em até 24h.</p>
-                <div class="contact-links">
-                    <a href="mailto:serramateus1@gmail.com" class="contact-link">
-                        <svg class="contact-link-icon" viewBox="0 0 16 16" fill="none">
-                            <rect x="1" y="3" width="14" height="10" rx="1.5" stroke="currentColor" stroke-width="1.2"/>
-                            <path d="M1 5l7 5 7-5" stroke="currentColor" stroke-width="1.2"/>
-                        </svg>
-                        serramateus1@gmail.com
-                    </a>
-                    <a href="https://github.com/mateuspserra" class="contact-link">
-                        <svg class="contact-link-icon" viewBox="0 0 16 16" fill="currentColor">
-                            <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/>
-                        </svg>
-                        github.com/mateuspserra
-                    </a>
-                    <a href="https://linkedin.com/" class="contact-link">
-                        <svg class="contact-link-icon" viewBox="0 0 16 16" fill="currentColor">
-                            <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z"/>
-                        </svg>
-                        linkedin.com/in/mateusserra
-                    </a>
-                </div>
+                <form class="contact-form reveal" action="https://formspree.io/f/mgopgbjn" method="POST">
+                    <div class="form-group">
+                        <label class="form-label" for="nome">nome</label>
+                        <input id="nome" type="text" name="nome" class="form-input" placeholder="Seu nome" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label" for="email">email</label>
+                        <input id="email" type="email" name="email" class="form-input" placeholder="seu@email.com" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label" for="mensagem">mensagem</label>
+                        <textarea id="mensagem" name="mensagem" class="form-textarea" placeholder="Conte sobre seu projeto, produto ou ideia..." required></textarea>
+                    </div>
+
+                    <button type="submit" class="form-submit">enviar mensagem</button>
+                    <p class="form-status" id="form-status" aria-live="polite"></p>
+                </form>
             </div>
-            <form class="contact-form" action="https://formspree.io/f/mgopgbjn" method="POST" onsubmit="handleSubmit(event)">
-                <div class="form-group">
-                    <label class="form-label">nome</label>
-                    <input type="text" name="nome" class="form-input" placeholder="Seu nome" required>
-                </div>
-                <div class="form-group">
-                    <label class="form-label">email</label>
-                    <input type="email" name="email" class="form-input" placeholder="seu@email.com" required>
-                </div>
-                <div class="form-group">
-                    <label class="form-label">mensagem</label>
-                    <textarea name="mensagem" class="form-textarea" placeholder="Conte sobre seu projeto ou ideia..." required></textarea>
-                </div>
-                <button type="submit" class="form-submit">enviar mensagem</button>
-            </form>
-        </div>
-    </section>
+        </section>
+    </main>
 
     <footer>
-        <span class="footer-copy">© 2026 Mateus Serra — desenvolvido com precisão</span>
-        <a href="#hero" class="footer-back">voltar ao topo ↑</a>
+        <span class="footer-copy">&copy; 2026 Mateus Serra</span>
+        <a href="#hero" class="footer-back">voltar ao topo</a>
     </footer>
 
-    <!-- Lightbox -->
-    <div class="lightbox" id="lightbox" onclick="closeLightbox(event)">
+    <div class="lightbox-sources" aria-hidden="true">
+        <img src="images/painel admin.png" alt="MotoTracker Painel Admin" data-gallery="painel-admin">
+        <img src="images/lj relatorios.png" alt="Sistema de Relatorios - visao geral" data-gallery="sistema-relatorios">
+        <img src="images/tela enfermagem.png" alt="Sistema de Relatorios - tela de enfermagem" data-gallery="sistema-relatorios">
+        <img src="images/meus relatorios.png" alt="Sistema de Relatorios - meus relatorios" data-gallery="sistema-relatorios">
+    </div>
+
+    <div class="lightbox" id="lightbox" aria-hidden="true">
         <div class="lightbox-content">
-            <button class="lightbox-close" onclick="closeLightbox(event)">×</button>
-            <button class="lightbox-arrow prev" onclick="lightboxNavigate(-1); event.stopPropagation();">‹</button>
+            <button class="lightbox-close" type="button" aria-label="Fechar imagem">&times;</button>
+            <button class="lightbox-arrow prev" type="button" aria-label="Imagem anterior">&#8249;</button>
             <img class="lightbox-image" id="lightbox-image" src="" alt="">
-            <button class="lightbox-arrow next" onclick="lightboxNavigate(1); event.stopPropagation();">›</button>
+            <button class="lightbox-arrow next" type="button" aria-label="Proxima imagem">&#8250;</button>
             <div class="lightbox-counter" id="lightbox-counter"></div>
         </div>
     </div>
