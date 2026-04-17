@@ -379,7 +379,7 @@ section {
 
 .hero-dev-card {
     display: grid;
-    gap: 22px;
+    gap: 16px;
 }
 
 .hero-dev-topline,
@@ -426,17 +426,17 @@ section {
 }
 
 .hero-dev-title {
-    max-width: 11ch;
-    font-size: clamp(34px, 4.6vw, 54px);
-    line-height: 0.96;
+    max-width: 9ch;
+    font-size: clamp(28px, 3.6vw, 42px);
+    line-height: 0.94;
     letter-spacing: -0.05em;
 }
 
 .hero-dev-desc {
     max-width: 58ch;
     color: var(--text-dim);
-    font-size: 16px;
-    line-height: 1.8;
+    font-size: 14px;
+    line-height: 1.65;
 }
 
 .hero-dev-grid {
@@ -446,8 +446,8 @@ section {
 }
 
 .hero-dev-block {
-    min-height: 104px;
-    padding: 18px 16px;
+    min-height: 90px;
+    padding: 14px 12px;
     border-radius: 22px;
     border: 1px solid rgba(255, 255, 255, 0.08);
     background: rgba(12, 16, 22, 0.88);
@@ -459,11 +459,12 @@ section {
 
 .hero-dev-block strong {
     display: block;
-    margin-top: 12px;
-    font-size: clamp(20px, 2.8vw, 28px);
+    margin-top: 8px;
+    font-size: clamp(16px, 1.6vw, 20px);
     line-height: 1;
     letter-spacing: -0.04em;
     color: var(--text);
+    word-break: break-word;
 }
 
 .hero-dev-progress {
@@ -503,6 +504,125 @@ section {
     border: 1px solid rgba(255, 255, 255, 0.08);
     background: rgba(16, 20, 27, 0.76);
     color: var(--text-dim);
+}
+
+.project-image-dev {
+    padding: 20px;
+    background:
+        radial-gradient(circle at 86% 18%, rgba(240, 196, 25, 0.18), transparent 28%),
+        radial-gradient(circle at 8% 100%, rgba(79, 216, 158, 0.12), transparent 32%),
+        linear-gradient(180deg, rgba(18, 22, 29, 0.96), rgba(9, 11, 16, 0.98));
+}
+
+.project-dev-preview {
+    display: grid;
+    gap: 16px;
+    min-height: 244px;
+    padding: 18px;
+    border-radius: 24px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    background: rgba(11, 15, 20, 0.86);
+}
+
+.project-dev-preview-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.project-dev-preview-kicker,
+.project-dev-preview-pill,
+.project-dev-preview-block span,
+.project-dev-preview-tags span {
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.project-dev-preview-kicker {
+    color: var(--accent);
+}
+
+.project-dev-preview-pill {
+    padding: 8px 10px;
+    border-radius: 999px;
+    border: 1px solid rgba(240, 196, 25, 0.18);
+    background: rgba(240, 196, 25, 0.1);
+    color: #f2d569;
+}
+
+.project-dev-preview-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+}
+
+.project-dev-preview-block {
+    min-height: 74px;
+    padding: 12px;
+    border-radius: 18px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    background: rgba(14, 18, 24, 0.9);
+}
+
+.project-dev-preview-block span {
+    color: var(--text-muted);
+}
+
+.project-dev-preview-block strong {
+    display: block;
+    margin-top: 8px;
+    font-size: 16px;
+    line-height: 1;
+    letter-spacing: -0.04em;
+    word-break: break-word;
+}
+
+.project-dev-preview-progress {
+    overflow: hidden;
+    height: 10px;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.project-dev-preview-progress span {
+    display: block;
+    width: 90%;
+    height: 100%;
+    border-radius: inherit;
+    background: linear-gradient(90deg, rgba(240, 196, 25, 0.96), rgba(255, 220, 103, 0.92));
+}
+
+.project-dev-preview-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.project-dev-preview-tags span {
+    padding: 8px 10px;
+    border-radius: 999px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    background: rgba(16, 20, 27, 0.76);
+    color: var(--text-dim);
+}
+
+.project-badge-static,
+.project-link-static {
+    cursor: default;
+}
+
+.project-badge-static:hover,
+.project-badge-static:focus-visible,
+.project-link-static:hover,
+.project-link-static:focus-visible {
+    transform: none;
+    color: var(--accent);
+    border-color: rgba(240, 196, 25, 0.24);
+    background: rgba(240, 196, 25, 0.08);
 }
 
 .hero-visual-frame img {
