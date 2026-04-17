@@ -33,7 +33,6 @@
     <link rel="icon" type="image/svg+xml" href="favicon.svg?v=2">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preload" as="image" href="images/painel%20admin.png">
     <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;700;800&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
     <noscript>
         <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;700;800&display=swap" rel="stylesheet">
@@ -103,18 +102,64 @@
             </div>
 
             <div class="hero-visual fade-in">
-                <div class="hero-visual-frame">
-                    <img
-                        src="images/painel admin.png"
-                        alt="Pr&eacute;via do painel administrativo do MotoTracker"
-                        loading="eager"
-                        decoding="async"
-                        fetchpriority="high"
-                    >
+                <div class="hero-visual-frame hero-visual-frame-project">
+                    <div class="hero-dev-card">
+                        <div class="hero-dev-topline">
+                            <span class="hero-dev-kicker">novo projeto</span>
+                            <div class="hero-dev-status">
+                                <span class="hero-dev-pill">em desenvolvimento</span>
+                                <span class="hero-dev-pill hero-dev-pill-muted">10% restante</span>
+                            </div>
+                        </div>
+
+                        <h3 class="hero-dev-title">SaaS de Agendamento para Barbearias</h3>
+                        <p class="hero-dev-desc">
+                            Produto multi-tenant em Next.js com agenda, dashboard operacional, billing com Stripe,
+                            lembretes e fluxo p&uacute;blico de agendamento por slug.
+                        </p>
+
+                        <div class="hero-dev-grid" aria-hidden="true">
+                            <div class="hero-dev-block">
+                                <span>build</span>
+                                <strong>ok</strong>
+                            </div>
+                            <div class="hero-dev-block">
+                                <span>lint</span>
+                                <strong>ok</strong>
+                            </div>
+                            <div class="hero-dev-block">
+                                <span>testes</span>
+                                <strong>ok</strong>
+                            </div>
+                            <div class="hero-dev-block">
+                                <span>deploy</span>
+                                <strong>pendente</strong>
+                            </div>
+                        </div>
+
+                        <div class="hero-dev-progress">
+                            <div class="hero-dev-progress-head">
+                                <span>90% conclu&iacute;do</span>
+                                <span>falta fechar produ&ccedil;&atilde;o</span>
+                            </div>
+                            <div class="hero-dev-progress-bar" aria-hidden="true">
+                                <span></span>
+                            </div>
+                        </div>
+
+                        <div class="hero-dev-tags">
+                            <span>Next.js</span>
+                            <span>React 19</span>
+                            <span>Prisma</span>
+                            <span>PostgreSQL</span>
+                            <span>NextAuth</span>
+                            <span>Stripe</span>
+                        </div>
+                    </div>
                 </div>
                 <div class="hero-visual-meta">
-                    <span>ecossistema MotoTracker</span>
-                    <span>app, API e painel admin</span>
+                    <span>sistema saas barbearia</span>
+                    <span>em desenvolvimento &bull; 10% restante</span>
                 </div>
             </div>
         </section>
