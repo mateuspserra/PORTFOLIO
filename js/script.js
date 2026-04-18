@@ -45,6 +45,32 @@ const galleries = {
             src: "images/monitor api.png",
             alt: "Monitor de APIs e Status"
         }
+    ],
+    "saas-barbearia": [
+        {
+            src: "images/principal.png",
+            alt: "SaaS de Agendamento para Barbearias - vis\u00e3o principal"
+        },
+        {
+            src: "images/dashboard.png",
+            alt: "SaaS de Agendamento para Barbearias - dashboard"
+        },
+        {
+            src: "images/agendamentos.png",
+            alt: "SaaS de Agendamento para Barbearias - agendamentos"
+        },
+        {
+            src: "images/clientes.png",
+            alt: "SaaS de Agendamento para Barbearias - clientes"
+        },
+        {
+            src: "images/profissionais.png",
+            alt: "SaaS de Agendamento para Barbearias - profissionais"
+        },
+        {
+            src: "images/servi\u00e7os.png",
+            alt: "SaaS de Agendamento para Barbearias - servi\u00e7os"
+        }
     ]
 };
 
