@@ -10,16 +10,27 @@ const observer = new IntersectionObserver((entries) => {
 
 bars.forEach(b => observer.observe(b));
 
-// Manipulador do formulário de contato
-function handleSubmit(e) {
+// Site estático: sem backend de envio, o formulário abre um e-mail pré-preenchido.
+function handleContactSubmit(e) {
     e.preventDefault();
+    const formData = new FormData(e.target);
+    const name = String(formData.get('name') || '').trim();
+    const email = String(formData.get('email') || '').trim();
+    const message = String(formData.get('message') || '').trim();
     const btn = e.target.querySelector('.form-submit');
-    btn.textContent = 'mensagem enviada ✓';
+
+    const subject = encodeURIComponent(`Contato pelo portfolio - ${name || 'novo projeto'}`);
+    const body = encodeURIComponent(
+        `Nome: ${name}\nE-mail: ${email}\n\nMensagem:\n${message}`
+    );
+
+    btn.textContent = 'abrindo e-mail...';
     btn.style.background = '#1D9E75';
-    
+
+    window.location.href = `mailto:serramateus1@gmail.com?subject=${subject}&body=${body}`;
+
     setTimeout(() => {
         btn.textContent = 'enviar mensagem';
         btn.style.background = '';
-        e.target.reset();
-    }, 3000);
+    }, 2000);
 }
