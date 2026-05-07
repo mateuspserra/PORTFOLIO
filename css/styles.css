@@ -1712,14 +1712,14 @@ footer {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: 46px;
-    height: 46px;
+    width: 58px;
+    height: 58px;
     text-decoration: none;
 }
 
 .nav-logo img {
-    width: 46px;
-    height: 46px;
+    width: 58px;
+    height: 58px;
     display: block;
     object-fit: contain;
     border-radius: 50%;
