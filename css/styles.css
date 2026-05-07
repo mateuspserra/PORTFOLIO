@@ -64,10 +64,25 @@ nav {
 }
 
 .nav-logo {
-    font-family: var(--mono);
-    font-size: 13px;
-    color: var(--accent);
-    letter-spacing: 0.02em;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    color: #FFD400;
+    text-decoration: none;
+}
+
+.nav-logo svg {
+    width: 28px;
+    height: 28px;
+    display: block;
+    fill: currentColor;
+    filter: drop-shadow(0 0 10px rgba(255, 212, 0, 0.18));
+}
+
+.nav-logo:hover {
+    color: #FFE45C;
 }
 
 .nav-links {
