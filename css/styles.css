@@ -1074,6 +1074,23 @@ section {
     font-weight: 700;
 }
 
+.about-stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 9px;
+    margin-top: 4px;
+}
+
+.about-stack span {
+    padding: 8px 11px;
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    color: var(--text-dim);
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: 0.04em;
+}
+
 .about-rail {
     display: grid;
     gap: 16px;
@@ -1259,6 +1276,14 @@ section {
 .contact-link:focus-visible {
     transform: translateY(-2px);
     border-color: rgba(240, 196, 25, 0.26);
+}
+
+.contact-link-whatsapp {
+    border-color: rgba(37, 211, 102, 0.28);
+}
+
+.contact-link-whatsapp .contact-link-label {
+    color: #48dc7b;
 }
 
 .contact-link-label {
