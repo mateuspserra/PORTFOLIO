@@ -837,6 +837,39 @@ section {
     line-height: 1.7;
 }
 
+.project-case-list {
+    display: grid;
+    gap: 12px;
+    margin-top: 20px;
+    margin-bottom: 26px;
+}
+
+.project-case-list > div {
+    display: grid;
+    grid-template-columns: minmax(112px, 0.32fr) 1fr;
+    align-items: baseline;
+    gap: 14px;
+    padding-top: 12px;
+    border-top: 1px solid var(--line);
+}
+
+.project-case-list dt {
+    color: var(--accent);
+    font-family: var(--mono);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    line-height: 1.5;
+    text-transform: uppercase;
+}
+
+.project-case-list dd {
+    margin: 0;
+    color: var(--text-muted);
+    font-size: 15px;
+    line-height: 1.65;
+}
+
 .project-highlights {
     display: flex;
     flex-wrap: wrap;
@@ -1643,6 +1676,11 @@ footer {
     .contact-form,
     .skill-group {
         padding: 22px;
+    }
+
+    .project-case-list > div {
+        grid-template-columns: 1fr;
+        gap: 5px;
     }
 
     .project-ecosystem {
